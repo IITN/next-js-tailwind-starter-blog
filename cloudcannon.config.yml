@@ -1,0 +1,9 @@
+collections_config:
+  nyheter:
+    path: data/blog
+    url: '/blog/[slug]'
+    output: true
+    _enabled_editors: ['content', 'data']
+    _inputs:
+      date:
+        type: date
