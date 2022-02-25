@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Image from './Image'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -16,7 +17,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <img className="h-16 bg-white" src="/static/images/lth-logo.png"></img>
+                  <Image className="h-16 bg-white" src="/static/images/lth-logo.png"></Image>
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
