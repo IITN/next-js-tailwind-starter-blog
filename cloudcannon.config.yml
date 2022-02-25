@@ -1,7 +1,6 @@
 paths:
-  paths:
-    static: 'public'
-    uploads: 'public/uploads'
+  static: 'public'
+  uploads: 'public/uploads'
 
 collections_config:
   nyheter:
