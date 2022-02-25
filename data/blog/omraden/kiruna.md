@@ -15,4 +15,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Ut pharetra sit amet aliquam. Enim sed faucibus turpis in eu mi. Rutrum quisque non tellus orci ac. Lorem ipsum dolor sit amet consectetur adipiscing. Porttitor leo a diam sollicitudin tempor. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae.
 
-<img src="/uploads/capture-1.PNG" width="954" height="636" />
+<img src="/uploads/capture.PNG" width="954" height="636" />
