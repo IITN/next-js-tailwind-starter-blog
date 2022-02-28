@@ -1,21 +1,25 @@
-import '@/css/tailwind.css'
-import '@/css/prism.css'
-import 'katex/dist/katex.css'
+import "@/css/tailwind.css";
+import "@/css/prism.css";
+import "katex/dist/katex.css";
 
-import '@fontsource/inter/variable-full.css'
+import "@fontsource/inter/variable-full.css";
 
-import { ThemeProvider } from 'next-themes'
-import Head from 'next/head'
+import { ThemeProvider } from "next-themes";
+import Head from "next/head";
 
-import siteMetadata from '@/data/siteMetadata'
-import Analytics from '@/components/analytics'
-import LayoutWrapper from '@/components/LayoutWrapper'
-import { ClientReload } from '@/components/ClientReload'
+import siteMetadata from "@/data/siteMetadata";
+import Analytics from "@/components/analytics";
+import LayoutWrapper from "@/components/LayoutWrapper";
+import { ClientReload } from "@/components/ClientReload";
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-const isSocket = process.env.SOCKET
+const isDevelopment = process.env.NODE_ENV === "development";
+const isSocket = process.env.SOCKET;
+
+import { CloudCannonConnect } from "@cloudcannon/react-connector";
 
 export default function App({ Component, pageProps }) {
+  const AppComponent = CloudCannonConnect(Component);
+
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
@@ -24,8 +28,8 @@ export default function App({ Component, pageProps }) {
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
       <LayoutWrapper>
-        <Component {...pageProps} />
+        <AppComponent {...pageProps} />
       </LayoutWrapper>
     </ThemeProvider>
-  )
+  );
 }
