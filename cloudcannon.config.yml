@@ -7,7 +7,7 @@ collections_config:
     path: data/blog
     url: "/blog/[slug]"
     output: true
-    _enabled_editors: ["content", "data"]
+    _enabled_editors: ["content", "data", "visual"]
     _inputs:
       date:
         type: date
