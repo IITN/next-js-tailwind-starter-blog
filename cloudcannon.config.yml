@@ -16,3 +16,8 @@ collections_config:
     path: data/authors
     output: true
     _enabled_editors: ["content", "data"]
+    _inouts:
+      authors:
+        type: select
+        options:
+          values: collections.authors
