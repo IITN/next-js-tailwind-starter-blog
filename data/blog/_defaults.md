@@ -1,8 +1,8 @@
 ---
 title: "Default"
 date:
-tags: []
+tags: [""]
 draft: false
 summary:
-authors: []
+authors: [""]
 ---
