@@ -90,15 +90,12 @@ export default function PostLayout({
                         </dd>
                         <dt className="sr-only">Twitter</dt>
                         <dd>
-                          {author.twitter && (
+                          {author.email && (
                             <Link
-                              href={author.twitter}
+                              href={`mailto:${author.twitter}`}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace(
-                                "https://twitter.com/",
-                                "@"
-                              )}
+                              {author.email}
                             </Link>
                           )}
                         </dd>
