@@ -2,9 +2,9 @@
 title: "Default"
 date:
 tags:
-  -
-draft: false
+  - "default"
+draft: true
 summary:
 authors:
-  -
+  - "default"
 ---
