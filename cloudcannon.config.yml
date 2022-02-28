@@ -4,7 +4,7 @@ paths:
 
 collections_config:
   articles:
-    name: artiklar
+    name: Artiklar
     path: data/blog
     url: "/blog/[slug]"
     output: true
@@ -18,7 +18,7 @@ collections_config:
           values: collections.authors
 
   authors:
-    name: författare
+    name: Författare
     path: data/authors
     output: true
     _enabled_editors: ["content", "data"]
