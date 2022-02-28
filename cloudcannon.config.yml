@@ -3,7 +3,8 @@ paths:
   uploads: "public/uploads"
 
 collections_config:
-  artiklar:
+  articles:
+    name: artiklar
     path: data/blog
     url: "/blog/[slug]"
     output: true
@@ -16,7 +17,8 @@ collections_config:
         options:
           values: collections.authors
 
-  författare:
+  authors:
+    name: författare
     path: data/authors
     output: true
     _enabled_editors: ["content", "data"]
