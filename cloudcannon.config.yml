@@ -11,13 +11,12 @@ collections_config:
     _inputs:
       date:
         type: date
+      authors:
+        type: select
+        options:
+          values: collections.authors
 
   författare:
     path: data/authors
     output: true
     _enabled_editors: ["content", "data"]
-    _inputs:
-      authors:
-        type: select
-        options:
-          values: collections.authors
