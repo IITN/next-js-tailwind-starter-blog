@@ -1,13 +1,13 @@
 paths:
-  static: 'public'
-  uploads: 'public/uploads'
+  static: "public"
+  uploads: "public/uploads"
 
 collections_config:
-  nyheter:
+  artiklar:
     path: data/blog
-    url: '/blog/[slug]'
+    url: "/blog/[slug]"
     output: true
-    _enabled_editors: ['content', 'data']
+    _enabled_editors: ["content", "data"]
     _inputs:
       date:
         type: date
