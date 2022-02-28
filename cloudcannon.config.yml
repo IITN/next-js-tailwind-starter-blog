@@ -11,3 +11,8 @@ collections_config:
     _inputs:
       date:
         type: date
+
+  författare:
+    path: data/authors
+    output: true
+    _enabled_editors: ["content", "data"]
