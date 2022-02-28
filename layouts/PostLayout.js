@@ -92,7 +92,7 @@ export default function PostLayout({
                         <dd>
                           {author.email && (
                             <Link
-                              href={`mailto:${author.twitter}`}
+                              href={`mailto:${author.email}`}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
                               {author.email}
