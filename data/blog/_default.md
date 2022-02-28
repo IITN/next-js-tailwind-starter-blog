@@ -1,5 +1,5 @@
 ---
-title:
+title: "Default"
 date:
 tags: []
 draft: false
