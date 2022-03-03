@@ -48,15 +48,13 @@ export async function getStaticProps(context) {
     fs.writeFileSync("./public/feed.xml", rss);
   }
 
-  return { props: { post, authorDetails, prev, next } };
+  return { props: { page: post, authorDetails, prev, next } };
 }
 
-export default function Blog({ post, authorDetails, prev, next, page }) {
-  console.log("PAGE: ", page);
+export default function Blog({ authorDetails, prev, next, page }) {
+  const { contentHtml, frontMatter } = page;
 
-  const { contentHtml, frontMatter } = post;
-
-  console.log(post);
+  console.log("PAGE", page);
 
   return (
     <PostLayout
