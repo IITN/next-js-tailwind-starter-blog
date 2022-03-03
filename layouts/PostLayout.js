@@ -58,7 +58,7 @@ export default function PostLayout({
                 </div>
               </dl>
               <div>
-                <PageTitle dataCmsBind={"Title"}>{title}</PageTitle>
+                <PageTitle dataCmsBind={"title"}>{title}</PageTitle>
               </div>
             </div>
           </header>
@@ -115,12 +115,9 @@ export default function PostLayout({
               </div>
             </div>
             <aside>
-              <div
-                data-cms-bind="tags"
-                className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"
-              >
+              <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
-                  <div className="py-4 xl:py-8">
+                  <div data-cms-bind="tags" className="py-4 xl:py-8">
                     <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       Tags
                     </h2>
