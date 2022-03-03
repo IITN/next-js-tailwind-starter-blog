@@ -28,6 +28,7 @@ export default function PostLayout({
   next,
   prev,
   children,
+  contentHtml,
 }) {
   const { slug, fileName, date, title, tags } = frontMatter;
 
@@ -106,7 +107,10 @@ export default function PostLayout({
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose dark:prose-dark max-w-none pt-10 pb-8">
+              <div
+                className="prose dark:prose-dark max-w-none pt-10 pb-8"
+                dangerouslySetInnerHTML={{ __html: contentHtml }}
+              >
                 {children}
               </div>
             </div>
