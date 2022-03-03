@@ -14,8 +14,6 @@ export default function App({ Component, pageProps }) {
     },
   });
 
-  console.log("pageProps: ", pageProps);
-
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>

@@ -24,7 +24,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps(context) {
+  const { params } = context;
+
+  console.log("context", context);
+
   const allPosts = await getAllFilesFrontMatter("blog");
   const postIndex = allPosts.findIndex(
     (post) => formatSlug(post.slug) === params.slug.join("/")
