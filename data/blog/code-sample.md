@@ -1,7 +1,11 @@
 ---
-title: Sample .md file
-date: "2016-03-08"
-tags: ["markdown", "code", "features"]
+title: Change Sample .md file
+date: 2022-03-03T00:00:00Z
+tags:
+  - foo
+  - features
+  - markdown
+  - code
 draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
 ---
