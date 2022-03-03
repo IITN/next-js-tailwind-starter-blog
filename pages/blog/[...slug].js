@@ -53,7 +53,11 @@ export async function getStaticProps(context) {
   return { props: { post, authorDetails, prev, next } };
 }
 
-export default function Blog({ post, authorDetails, prev, next }) {
+export default function Blog(props) {
+  console.log("PROPS", props);
+
+  const { post, authorDetails, prev, next } = props;
+
   const { contentHtml, frontMatter } = post;
 
   console.log(post);
