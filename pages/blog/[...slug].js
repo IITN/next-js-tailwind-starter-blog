@@ -27,8 +27,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  console.log("context", context);
-
   const allPosts = await getAllFilesFrontMatter("blog");
   const postIndex = allPosts.findIndex(
     (post) => formatSlug(post.slug) === params.slug.join("/")
@@ -53,7 +51,9 @@ export async function getStaticProps(context) {
   return { props: { post, authorDetails, prev, next } };
 }
 
-export default function Blog({ post, authorDetails, prev, next }) {
+export default function Blog({ post, authorDetails, prev, next, page }) {
+  console.log("PAGE: ", page);
+
   const { contentHtml, frontMatter } = post;
 
   console.log(post);
