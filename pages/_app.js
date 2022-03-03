@@ -7,12 +7,7 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import { CloudCannonConnect } from "@cloudcannon/react-connector";
 
 export default function App({ Component, pageProps }) {
-  const AppComponent = CloudCannonConnect(Component, {
-    valueOptions: {
-      keepMarkdownAsHTML: false,
-      preferBlobs: true,
-    },
-  });
+  const AppComponent = CloudCannonConnect(Component);
 
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
