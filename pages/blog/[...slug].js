@@ -56,7 +56,7 @@ export async function getStaticProps(context) {
 export default function Blog({ post, authorDetails, prev, next }) {
   const { contentHtml, frontMatter } = post;
 
-  console.log(frontMatter);
+  console.log(post);
 
   return (
     <PostLayout
