@@ -57,7 +57,7 @@ export default function PostLayout({
                   </dd>
                 </div>
               </dl>
-              <div>
+              <div data-cms-bind="title">
                 <PageTitle dataCmsBind={"title"}>{title}</PageTitle>
               </div>
             </div>
