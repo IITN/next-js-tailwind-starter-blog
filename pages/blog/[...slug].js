@@ -53,14 +53,8 @@ export async function getStaticProps(context) {
   return { props: { post, authorDetails, prev, next } };
 }
 
-export default function Blog(props) {
-  console.log("PROPS", props);
-
-  const { post, authorDetails, prev, next } = props;
-
-  const { contentHtml, frontMatter } = post;
-
-  console.log(post);
+export default function Blog({ post, authorDetails, prev, next, page }) {
+  const frontMatter = Object.keys(page).length === 0 ? post.frontMatter : page;
 
   return (
     <PostLayout
@@ -68,7 +62,7 @@ export default function Blog(props) {
       authorDetails={authorDetails}
       prev={prev}
       next={next}
-      contentHtml={contentHtml}
+      contentHtml={post.contentHtml}
     />
   );
 }
