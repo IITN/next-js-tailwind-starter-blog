@@ -44,6 +44,7 @@ export async function getStaticProps(context) {
   if (post.frontMatter.authors) {
     const authorList = post.frontMatter.authors;
     const authorPromise = authorList.map(async (author) => {
+      console.log(post.frontMatter.authors);
       const authorResults = await getFileBySlug("authors", [author]);
       return authorResults.frontMatter;
     });

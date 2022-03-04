@@ -12,6 +12,12 @@ collections_config:
     _inputs:
       date:
         type: date
+      authors:
+        type: multiselect
+        options:
+          values: authors.name
+          value_key: key
+          text_key: display_name
 
   authors:
     name: Författare
