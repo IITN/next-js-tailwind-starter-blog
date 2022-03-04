@@ -15,7 +15,10 @@ collections_config:
       authors:
         type: select
         options:
-          values: collections.authors.name
+          values:
+            - Bolt
+            - Nut
+            - Gear
 
   authors:
     name: Författare
