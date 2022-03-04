@@ -10,12 +10,8 @@ collections_config:
     output: true
     _enabled_editors: ["content", "data", "visual"]
     writers:
-      type: multiselect
-      options:
-        values:
-          - Bolt
-          - Nut
-          - Gear
+      - Erik
+
     _inputs:
       date:
         type: date
