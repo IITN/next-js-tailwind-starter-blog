@@ -9,15 +9,14 @@ collections_config:
     url: "/blog/[slug]"
     output: true
     _enabled_editors: ["content", "data", "visual"]
-    spare_part: Bolt
+    writers:
+      - erik
     _inputs:
-      spare_part:
-        type: select
+      writers:
+        type: multiselect
         options:
           values:
-            - Bolt
-            - Nut
-            - Gear
+            - erik
 
   authors:
     name: Författare
