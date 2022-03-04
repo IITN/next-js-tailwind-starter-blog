@@ -12,13 +12,6 @@ collections_config:
     _inputs:
       date:
         type: date
-      authors:
-        type: select
-        options:
-          values:
-            - Bolt
-            - Nut
-            - Gear
 
   authors:
     name: Författare
