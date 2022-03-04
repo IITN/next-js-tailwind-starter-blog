@@ -15,7 +15,7 @@ collections_config:
       authors:
         type: multiselect
         options:
-          values: collections.authors
+          values: collection.authors
 
   authors:
     name: Författare
