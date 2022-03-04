@@ -5,5 +5,4 @@ tags:
   - "default"
 draft: true
 summary:
-writers:
 ---
