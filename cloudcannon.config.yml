@@ -9,6 +9,13 @@ collections_config:
     url: "/blog/[slug]"
     output: true
     _enabled_editors: ["content", "data", "visual"]
+    writers:
+      type: multiselect
+      options:
+        values:
+          - Bolt
+          - Nut
+          - Gear
     _inputs:
       date:
         type: date
