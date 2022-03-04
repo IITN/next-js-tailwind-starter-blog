@@ -13,8 +13,7 @@ collections_config:
       writers:
         type: multiselect
         options:
-          values:
-            - erik
+          values: authors
 
   authors:
     name: Författare
