@@ -15,9 +15,7 @@ collections_config:
       authors:
         type: multiselect
         options:
-          values: "hello"
-          value_key: key
-          text_key: display_name
+          values: collections.authors
 
   authors:
     name: Författare
