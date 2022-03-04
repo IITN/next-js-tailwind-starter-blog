@@ -37,12 +37,18 @@ export async function getStaticProps(context) {
   const next = allPosts[postIndex - 1] || null;
   const post = await getFileBySlug("blog", params.slug.join("/"));
 
-  const authorList = post.frontMatter.authors || ["default"];
-  const authorPromise = authorList.map(async (author) => {
-    const authorResults = await getFileBySlug("authors", [author]);
-    return authorResults.frontMatter;
-  });
-  const authorDetails = await Promise.all(authorPromise);
+  console.log(post.frontMatter.authors);
+
+  let authorDetails = [];
+
+  if (post.frontMatter.authors) {
+    const authorList = post.frontMatter.authors;
+    const authorPromise = authorList.map(async (author) => {
+      const authorResults = await getFileBySlug("authors", [author]);
+      return authorResults.frontMatter;
+    });
+    authorDetails = await Promise.all(authorPromise);
+  }
 
   // rss
   if (allPosts.length > 0) {

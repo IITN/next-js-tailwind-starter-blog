@@ -5,6 +5,6 @@ tags:
   - "default"
 draft: true
 summary:
-authorss:
-  - "default"
+authors:
+  -
 ---
