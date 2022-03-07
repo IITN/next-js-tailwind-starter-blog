@@ -2,6 +2,14 @@ paths:
   static: "public"
   uploads: "public/uploads"
 
+_structures:
+  example:
+    values:
+      - value:
+          name:
+          description:
+          image:
+
 collections_config:
   articles:
     name: Artiklar
@@ -16,9 +24,12 @@ collections_config:
           values: collections.authors
       date:
         type: date
-      document:
-        type: file
-        uploads_dir: public/uploads
+      documents:
+        type: array
+        options:
+          structures:
+            testinput:
+              type: text
 
   authors:
     name: Författare
