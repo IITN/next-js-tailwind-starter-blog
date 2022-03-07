@@ -10,6 +10,7 @@ _structures:
           name:
           description:
           image:
+            type: text
 
 collections_config:
   articles:
