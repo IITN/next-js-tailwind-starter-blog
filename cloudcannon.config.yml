@@ -16,9 +16,13 @@ paths:
 #           image:
 
 collections_config:
-  test:
-    path: test
-    parser: yaml
+  webpages:
+    path: data/pages
+    url: /[slug]
+    output: true
+    name: "pages"
+    _icon: "wysiwyg"
+    _enabled_editors: ["visual", "data"]
 
   articles:
     name: Artiklar
