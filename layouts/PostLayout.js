@@ -135,16 +135,18 @@ export default function PostLayout({
                     <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       Links
                     </h2>
-                    <div className="">
-                      {links.map((link) => (
-                        <a
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block"
-                          href={link.href}
-                        >
-                          {link.title}
-                        </a>
+                    <ul className="list-disc ">
+                      {links.map((link, i) => (
+                        <li key={i}>
+                          <a
+                            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block"
+                            href={link.href}
+                          >
+                            {link.title}
+                          </a>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 )}
                 {documents && (
@@ -152,17 +154,19 @@ export default function PostLayout({
                     <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       Documents
                     </h2>
-                    <div className="">
+                    <ul className="list-disc ">
                       {documents.map((document) => (
-                        <Link
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block"
-                          href={document.file}
-                          target="_blank"
-                        >
-                          {document.name}
-                        </Link>
+                        <li>
+                          <Link
+                            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block"
+                            href={document.file}
+                            target="_blank"
+                          >
+                            {document.name}
+                          </Link>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 )}
                 {(next || prev) && (
