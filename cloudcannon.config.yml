@@ -3,17 +3,17 @@ paths:
   uploads: "public/uploads"
 
 # file structure
-_structures:
-  document:
-    values:
-      - label: Image
-        _inputs:
-          image:
-            type: text
-        value:
-          name:
-          description:
-          image:
+# _structures:
+#   document:
+#     values:
+#       - label: Image
+#         _inputs:
+#           image:
+#             type: text
+#         value:
+#           name:
+#           description:
+#           image:
 
 collections_config:
   articles:
@@ -32,7 +32,17 @@ collections_config:
       documents:
         type: array
         options:
-          structures: _structures.document
+          structures:
+            document:
+              values:
+                - label: Image
+                  _inputs:
+                    image:
+                      type: switch
+                  value:
+                    name:
+                    description:
+                    image:
 
   authors:
     name: Författare
