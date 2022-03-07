@@ -2,8 +2,9 @@ paths:
   static: "public"
   uploads: "public/uploads"
 
+# file structure
 _structures:
-  example:
+  document:
     values:
       - value:
           name:
@@ -27,11 +28,7 @@ collections_config:
       documents:
         type: array
         options:
-          structures:
-            testinput:
-              type: file
-            moretest:
-              type: switch
+          structures: _structures.document
 
   authors:
     name: Författare

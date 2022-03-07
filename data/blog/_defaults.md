@@ -7,7 +7,4 @@ draft: true
 summary:
 authors:
 documents:
-  - name: title
-    surname: description
-    path: /tester
 ---
