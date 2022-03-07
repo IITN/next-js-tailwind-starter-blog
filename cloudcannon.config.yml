@@ -33,16 +33,15 @@ collections_config:
         type: array
         options:
           structures:
-            document:
-              values:
-                - label: Image
-                  _inputs:
-                    image:
-                      type: switch
-                  value:
-                    name:
-                    description:
-                    image:
+            values:
+              - label: Image
+                _inputs:
+                  image:
+                    type: switch
+                value:
+                  name:
+                  description:
+                  image:
 
   authors:
     name: Författare
