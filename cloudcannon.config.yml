@@ -47,6 +47,18 @@ collections_config:
                   name:
                   description:
                   file:
+      links:
+        type: array
+        options:
+          structures:
+            values:
+              - label: Links
+                icon: links
+                _inputs:
+                  - title:
+                      type: text
+                    href:
+                      type: url
 
   authors:
     name: Författare
