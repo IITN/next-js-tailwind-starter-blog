@@ -12,6 +12,9 @@ summary: >-
 authors:
   - data/authors/lth-traktor.md
 documents:
+  - name: bra-att-ha-dokument.pdf
+    description:
+    file: /uploads/750426.pdf
 links:
   - title: länk till annan sida
     href: https://lthtraktor.com/
