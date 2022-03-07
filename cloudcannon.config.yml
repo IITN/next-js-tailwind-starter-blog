@@ -17,11 +17,7 @@ paths:
 
 collections_config:
   faq:
-    name: Frågor & Svar
     path: data/faq.yaml
-    output: false
-    parser: yaml
-    _enabled_editors: ["data"]
 
   articles:
     name: Artiklar
