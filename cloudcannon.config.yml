@@ -10,7 +10,7 @@ collections_config:
     output: true
     _enabled_editors: ["content", "data", "visual"]
     _inputs:
-      writers:
+      authors:
         type: multiselect
         options:
           values: collections.authors

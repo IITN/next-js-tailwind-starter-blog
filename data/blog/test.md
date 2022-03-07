@@ -3,8 +3,8 @@ title: test
 date:
 tags:
   - default
-draft: true
+draft: false
 summary:
-writers:
+authors:
   - data/authors/erik.md
 ---
