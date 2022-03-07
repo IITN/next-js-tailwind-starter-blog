@@ -16,8 +16,9 @@ paths:
 #           image:
 
 collections_config:
-  faq:
-    path: data/faq.yaml
+  test:
+    path: test
+    parser: yaml
 
   articles:
     name: Artiklar
