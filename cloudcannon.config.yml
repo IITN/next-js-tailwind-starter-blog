@@ -29,7 +29,9 @@ collections_config:
         options:
           structures:
             testinput:
-              type: text
+              type: file
+            moretest:
+              type: switch
 
   authors:
     name: Författare
