@@ -15,6 +15,13 @@ paths:
 #           description:
 #           image:
 
+data_config:
+  faq:
+    name: Frågor & Svar
+    path: data/faq.yaml
+    parser: yaml
+    _enabled_editors: ["data"]
+
 collections_config:
   articles:
     name: Artiklar
@@ -68,9 +75,3 @@ collections_config:
     path: data/authors
     output: true
     _enabled_editors: ["content", "data"]
-
-  faq:
-    name: Frågor & Svar
-    path: data/faq.yaml
-    parser: yaml
-    _enabled_editors: ["data"]
