@@ -16,6 +16,9 @@ collections_config:
           values: collections.authors
       date:
         type: date
+      document:
+        type: file
+        uploads_dir: public/uploads
 
   authors:
     name: Författare
