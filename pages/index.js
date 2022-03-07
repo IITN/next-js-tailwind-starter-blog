@@ -28,10 +28,16 @@ export default function Home({ posts, page }) {
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="editable md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl">
+          <h1
+            data-cms-bind="header"
+            className="editable md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl"
+          >
             {header}
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          <p
+            data-cms-bind="subheader"
+            className="text-lg leading-7 text-gray-500 dark:text-gray-400"
+          >
             {subheader}
           </p>
         </div>
