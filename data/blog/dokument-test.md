@@ -11,8 +11,5 @@ documents:
   - name: Test
     description:
     file: /uploads/750426.pdf
-  - name:
-    description:
-    file:
 ---
 
