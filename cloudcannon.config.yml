@@ -15,14 +15,14 @@ paths:
 #           description:
 #           image:
 
-data_config:
+collections_config:
   faq:
     name: Frågor & Svar
     path: data/faq.yaml
+    output: false
     parser: yaml
     _enabled_editors: ["data"]
 
-collections_config:
   articles:
     name: Artiklar
     path: data/blog
