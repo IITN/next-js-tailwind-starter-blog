@@ -15,6 +15,9 @@ documents:
 links:
   - title: länk till annan sida
     href: https://lthtraktor.com/
+  - title: Färskrivare
+    href: >-
+      https://splendid-door.cloudvent.net/blog/personal/checklista-f%C3%B6r-f%C3%A4rdskrivarna-i-fikarummet
 ---
 
 Nulla ex tortor, eleifend hendrerit fringilla id, tristique a purus. Nunc at enim justo. Nullam at pellentesque nibh. Aliquam at volutpat magna. Fusce sit amet ultrices leo. Vestibulum sagittis magna at finibus blandit. Integer porta nisi a nulla dapibus tristique vel vitae orci. Duis sodales ante lorem, eu fermentum eros placerat nec. Vivamus pharetra ex sed tellus aliquam gravida. Aliquam eros neque, commodo in metus sit amet, venenatis sagittis dui. Sed convallis cursus maximus. Ut id diam mollis, elementum massa ut, eleifend neque. Curabitur tincidunt diam quis turpis cursus ullamcorper.
