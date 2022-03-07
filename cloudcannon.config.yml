@@ -34,7 +34,7 @@ collections_config:
         options:
           structures:
             values:
-              - label: Image
+              - label: Document
                 _inputs:
                   name:
                     type: text
