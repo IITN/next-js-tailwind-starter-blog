@@ -2,7 +2,7 @@ import Link from "@/components/Link";
 import { PageSEO } from "@/components/SEO";
 import Tag from "@/components/Tag";
 import siteMetadata from "@/data/siteMetadata";
-import { getAllFilesFrontMatter } from "@/lib/mdx";
+import { getAllFilesFrontMatter, getFileBySlug } from "@/lib/mdx";
 import formatDate from "@/lib/utils/formatDate";
 import { FAQ } from "@/components/FAQ";
 
@@ -12,11 +12,14 @@ const MAX_DISPLAY = 4;
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog");
+  const page = await getFileBySlug("page", "index");
 
-  return { props: { posts } };
+  return { props: { posts, page: { ...page.frontMatter } } };
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, page }) {
+  const { header, subheader, faq } = page;
+
   return (
     <>
       <PageSEO
@@ -26,10 +29,10 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="editable md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl">
-            Senaste
+            {header}
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            {subheader}
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -96,7 +99,7 @@ export default function Home({ posts }) {
         </div>
       )}
       <div className="my-16">
-        <FAQ />
+        <FAQ title={faq.title} questions={faq.questions} />
       </div>
     </>
   );

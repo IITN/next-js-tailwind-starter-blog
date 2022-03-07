@@ -17,10 +17,10 @@ paths:
 
 collections_config:
   webpages:
-    path: data/pages
+    path: data/page
     url: /[slug]
     output: true
-    name: "pages"
+    name: "Pages"
     _icon: "wysiwyg"
     _enabled_editors: ["visual", "data"]
 
