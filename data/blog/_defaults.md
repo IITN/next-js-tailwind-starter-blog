@@ -6,5 +6,4 @@ tags:
 draft: true
 summary:
 authors:
-  -
 ---
