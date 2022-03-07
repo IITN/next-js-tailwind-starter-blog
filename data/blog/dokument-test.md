@@ -11,5 +11,8 @@ documents:
   - name: Test
     description:
     file: /uploads/750426.pdf
+  - name: npc.pdf
+    description:
+    file: /uploads/nordic-performance-center-powerlifting-club-dopingavtal-2021.pdf
 ---
 
