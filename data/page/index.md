@@ -1,5 +1,5 @@
 ---
-header: Senaste
+header: Nyheter
 subheader: Välkommen till personalwebben
 faq:
   title: Vanliga Frågor
@@ -10,10 +10,10 @@ faq:
         dapibus tristique vel vitae orci. Duis sodales ante lorem, eu fermentum
         eros placerat nec. Vivamus pharetra ex sed tellus aliquam gravida.
         Aliquam eros neque, commodo in metus sit amet, venenatis sagittis dui.
-
     - question: Hur köper man arbetskläder?
       answer: >-
         Nulla ex tortor, eleifend hendrerit fringilla id, tristique a purus.
         Nunc at enim justo. Nullam at pellentesque nibh. Aliquam at volutpat
         magna. Fusce sit amet ultrices leo.
 ---
+
