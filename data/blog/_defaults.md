@@ -6,5 +6,5 @@ tags:
 draft: true
 summary:
 authors:
-document:
+documents:
 ---
