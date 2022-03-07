@@ -36,12 +36,16 @@ collections_config:
             values:
               - label: Image
                 _inputs:
-                  image:
-                    type: switch
+                  name:
+                    type: text
+                  description:
+                    type: textarea
+                  file:
+                    type: document
                 value:
                   name:
                   description:
-                  image:
+                  file:
 
   authors:
     name: Författare
