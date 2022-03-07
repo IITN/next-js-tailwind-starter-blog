@@ -8,7 +8,10 @@ summary: >-
   Vi har nu hängt upp en checklista där ni kan bocka av när man kopierat
   förarkort och tömt fordonsskrivarna varje månad. Förarkorten ska tömmas inom
   28 dagar och skrivarna ska tömmas inom 90 dagar.
+authors:
+  - data/authors/lth-traktor.md
 ---
+
 #### Checklista för färdskrivarna i fikarummet
 
 Vi har nu hängt upp en checklista där ni kan bocka av när man kopierat förarkort och tömt fordonsskrivarna varje m&aring;nad. Förarkorten ska tömmas inom 28 dagar och skrivarna ska tömmas inom 90 dagar.
