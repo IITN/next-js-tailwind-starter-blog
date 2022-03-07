@@ -30,7 +30,9 @@ export default function PostLayout({
   children,
   contentHtml,
 }) {
-  const { slug, fileName, date, title, tags } = frontMatter;
+  const { slug, fileName, date, title, tags, documents } = frontMatter;
+
+  console.log(documents);
 
   return (
     <SectionContainer>
@@ -124,6 +126,24 @@ export default function PostLayout({
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {documents && (
+                  <div data-cms-bind="tags" className="py-4 xl:py-8">
+                    <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                      Documents
+                    </h2>
+                    <div className="">
+                      {documents.map((document) => (
+                        <Link
+                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block"
+                          href={document.file}
+                          target="_blank"
+                        >
+                          {document.name}
+                        </Link>
                       ))}
                     </div>
                   </div>
