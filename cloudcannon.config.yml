@@ -4,12 +4,12 @@ paths:
 
 # file structure
 _structures:
+  _inputs:
+    image:
+      type: text
   document:
     values:
       - value:
-          _inputs:
-            image:
-              type: text
           name:
           description:
           image:
