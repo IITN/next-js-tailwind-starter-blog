@@ -29,7 +29,7 @@ collections_config:
       tags:
         type: array
         options:
-          values: collections.articles.tags
+          values: collections.articles
 
   webpages:
     path: data/page
