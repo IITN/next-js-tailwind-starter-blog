@@ -16,6 +16,21 @@ paths:
 #           image:
 
 collections_config:
+  feed:
+    path: data/feed
+    url: /feed/[slug]
+    output: true
+    name: Feeds
+    _inputs:
+      title:
+        type: text
+      draft:
+        type: switch
+      tags:
+        type: array
+        options:
+          values: collections.articles.tags
+
   webpages:
     path: data/page
     url: /[slug]
