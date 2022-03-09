@@ -29,7 +29,7 @@ collections_config:
       tags:
         type: multiselect
         options:
-          values: collections.articles
+          values: collections.articles.tags
 
   webpages:
     path: data/page
