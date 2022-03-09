@@ -27,7 +27,7 @@ collections_config:
       draft:
         type: switch
       tags:
-        type: array
+        type: multiselect
         options:
           values: collections.articles
 
