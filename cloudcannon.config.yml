@@ -29,9 +29,7 @@ collections_config:
       tags:
         type: multiselect
         options:
-          values: collections.articles
-          value_key: tags
-          test_key: tags
+          allow_create: true
 
   webpages:
     path: data/page
