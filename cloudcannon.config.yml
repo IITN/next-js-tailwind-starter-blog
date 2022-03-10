@@ -29,7 +29,12 @@ collections_config:
       tags:
         type: array
         options:
-          allow_create: true
+          structures:
+            values:
+              - label: Tag
+                icon: sell
+                value:
+                  tag:
 
   webpages:
     path: data/page
