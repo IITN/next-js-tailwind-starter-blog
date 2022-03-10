@@ -27,7 +27,7 @@ collections_config:
       draft:
         type: switch
       tags:
-        type: multiselect
+        type: array
         options:
           allow_create: true
 
@@ -48,8 +48,6 @@ collections_config:
     _inputs:
       authors:
         type: multiselect
-        options:
-          values: collections.authors
       date:
         type: date
       documents:
