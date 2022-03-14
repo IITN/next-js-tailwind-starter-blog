@@ -25,16 +25,9 @@ collections_config:
       title:
         type: text
       draft:
-        type: switch
+        type: checkbox
       tags:
         type: array
-        options:
-          structures:
-            values:
-              - label: Tag
-                icon: sell
-                value:
-                  tag:
 
   webpages:
     path: data/page
