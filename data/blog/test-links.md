@@ -2,7 +2,7 @@
 title: Test links
 date: 2022-03-07T00:00:00Z
 tags:
-  - url
+  - data/tag/personal.md
 draft: false
 summary: >-
   Vivamus pharetra ex sed tellus aliquam gravida. Aliquam eros neque, commodo in
