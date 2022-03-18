@@ -92,4 +92,4 @@ collections_config:
     name: Tags
     path: data/tag
     output: true
-    _enabled_editors: ["data"]
+    _enabled_editors: ["data", "content"]
