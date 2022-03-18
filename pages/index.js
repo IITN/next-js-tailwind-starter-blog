@@ -13,12 +13,24 @@ const MAX_DISPLAY = 4;
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog");
 
-  const postsWithTags = posts.map((post) => {
-    return {
-      ...post,
-      tags: post.tags.map((path) => pathToSlug(path)),
-    };
-  });
+  const postsWithTags = await Promise.all(
+    posts.map(async (post) => {
+      const tags = await Promise.all(
+        post.tags.map(async (path) => {
+          const slug = pathToSlug(path);
+          const tag = await getFileBySlug("tag", slug);
+          return tag.frontMatter;
+        })
+      );
+
+      return {
+        ...post,
+        tags,
+      };
+    })
+  );
+
+  console.log(postsWithTags);
 
   const page = await getFileBySlug("page", "index");
 
@@ -76,7 +88,7 @@ export default function Home({ posts, page }) {
                           </h2>
                           <div className="flex flex-wrap">
                             {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
+                              <Tag key={tag} href={tag.slug} text={tag.name} />
                             ))}
                           </div>
                         </div>

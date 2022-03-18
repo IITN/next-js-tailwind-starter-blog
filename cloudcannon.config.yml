@@ -91,3 +91,6 @@ collections_config:
     path: data/tag
     output: true
     _enabled_editors: ["data"]
+    _instance_values:
+      _uuid: UUID
+      created_at: NOW
