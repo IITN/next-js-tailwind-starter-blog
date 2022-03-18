@@ -2,7 +2,7 @@ import Link from "@/components/Link";
 import { PageSEO } from "@/components/SEO";
 import Tag from "@/components/Tag";
 import siteMetadata from "@/data/siteMetadata";
-import { getAllFilesFrontMatter, getFileBySlug } from "@/lib/mdx";
+import { getAllFilesFrontMatter, getFileBySlug, pathToSlug } from "@/lib/mdx";
 import formatDate from "@/lib/utils/formatDate";
 import { FAQ } from "@/components/FAQ";
 
@@ -12,9 +12,17 @@ const MAX_DISPLAY = 4;
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog");
+
+  const postsWithTags = posts.map((post) => {
+    return {
+      ...post,
+      tags: post.tags.map((path) => pathToSlug(path)),
+    };
+  });
+
   const page = await getFileBySlug("page", "index");
 
-  return { props: { posts, page: { ...page.frontMatter } } };
+  return { props: { posts: postsWithTags, page: { ...page.frontMatter } } };
 }
 
 export default function Home({ posts, page }) {
