@@ -87,3 +87,9 @@ collections_config:
     path: data/authors
     output: true
     _enabled_editors: ["content", "data"]
+
+  tags:
+    name: Tags
+    path: data/tag
+    output: true
+    _enabled_editors: ["data"]
