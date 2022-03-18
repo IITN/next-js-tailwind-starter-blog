@@ -90,6 +90,7 @@ collections_config:
 
   tags:
     name: Tags
+    parser: yaml
     path: data/tag
     output: true
     _enabled_editors: ["data", "content"]
