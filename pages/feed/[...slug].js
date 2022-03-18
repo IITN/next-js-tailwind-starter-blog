@@ -28,7 +28,5 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Projects({ page }) {
-  console.log(page);
-
   return <FeedLayouyt posts={[]} />;
 }

@@ -29,10 +29,9 @@ export default function PostLayout({
   prev,
   children,
   contentHtml,
+  tags,
 }) {
-  const { slug, fileName, date, title, tags, documents, links } = frontMatter;
-
-  console.log(links);
+  const { slug, fileName, date, title, documents, links } = frontMatter;
 
   return (
     <SectionContainer>
@@ -122,7 +121,7 @@ export default function PostLayout({
                     </h2>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
+                        <Tag key={tag} text={tag.name} href={tag.slug} />
                       ))}
                     </div>
                   </div>

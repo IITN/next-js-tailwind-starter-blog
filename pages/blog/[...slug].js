@@ -28,17 +28,14 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  console.log("context", context);
-
   const allPosts = await getAllFilesFrontMatter("blog");
+
   const postIndex = allPosts.findIndex(
     (post) => formatSlug(post.slug) === params.slug.join("/")
   );
   const prev = allPosts[postIndex + 1] || null;
   const next = allPosts[postIndex - 1] || null;
   const post = await getFileBySlug("blog", params.slug.join("/"));
-
-  console.log(post.frontMatter.authors);
 
   let authorDetails = [];
 
@@ -52,16 +49,23 @@ export async function getStaticProps(context) {
     authorDetails = await Promise.all(authorPromise);
   }
 
-  // rss
-  if (allPosts.length > 0) {
-    const rss = generateRss(allPosts);
-    fs.writeFileSync("./public/feed.xml", rss);
+  let tags = [];
+
+  if (post.frontMatter.tags) {
+    const tagList = post.frontMatter.tags;
+    tags = await Promise.all(
+      tagList.map(async (path) => {
+        const slug = pathToSlug(path);
+        const tag = await getFileBySlug("tag", slug);
+        return tag.frontMatter;
+      })
+    );
   }
 
-  return { props: { post, authorDetails, prev, next } };
+  return { props: { post, authorDetails, tags, prev, next } };
 }
 
-export default function Blog({ post, authorDetails, prev, next, page }) {
+export default function Blog({ post, authorDetails, prev, next, page, tags }) {
   const frontMatter = Object.keys(page).length === 0 ? post.frontMatter : page;
 
   return (
@@ -70,6 +74,7 @@ export default function Blog({ post, authorDetails, prev, next, page }) {
       authorDetails={authorDetails}
       prev={prev}
       next={next}
+      tags={tags}
       contentHtml={post.contentHtml}
     />
   );

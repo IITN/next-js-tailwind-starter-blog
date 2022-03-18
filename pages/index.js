@@ -30,8 +30,6 @@ export async function getStaticProps() {
     })
   );
 
-  console.log(postsWithTags);
-
   const page = await getFileBySlug("page", "index");
 
   return { props: { posts: postsWithTags, page: { ...page.frontMatter } } };
