@@ -26,8 +26,6 @@ collections_config:
         type: text
       draft:
         type: checkbox
-      tags:
-        type: array
 
   webpages:
     path: data/page

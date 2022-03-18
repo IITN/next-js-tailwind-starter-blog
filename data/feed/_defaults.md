@@ -2,5 +2,4 @@
 title:
 draft: false
 tags:
-  -
 ---
