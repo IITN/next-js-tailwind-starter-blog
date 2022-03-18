@@ -93,3 +93,7 @@ collections_config:
     path: data/tag
     output: true
     _enabled_editors: ["data"]
+    add_options:
+      - name: Add Tags
+        icon: sell
+        href: cloudcannon::editor/collections/tags/.md🆕
