@@ -88,6 +88,7 @@ collections_config:
     output: true
     _enabled_editors: ["content", "data"]
 
+data_config:
   tags:
     name: Tags
     parser: yaml
