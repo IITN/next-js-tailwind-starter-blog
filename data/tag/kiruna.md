@@ -1,3 +1,3 @@
 ---
-name: kiruna
+name: kiruna-v2
 ---
