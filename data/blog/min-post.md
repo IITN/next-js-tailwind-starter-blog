@@ -3,7 +3,6 @@ title: Min Post
 date: 2022-03-18T00:00:00Z
 tags:
   - data/tag/kiruna.md
-  - data/tag/personal.md
 draft: false
 summary: >-
   Vestibulum eu metus eu neque ultrices hendrerit quis in neque. Donec in
