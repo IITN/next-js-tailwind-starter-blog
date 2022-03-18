@@ -30,12 +30,6 @@ export default function Tags({ tags }) {
             return (
               <div key={t} className="mt-2 mb-2 mr-5">
                 <Tag text={tags[t].name} href={tags[t].slug} />
-                <Link
-                  href={`/tags/${kebabCase(t)}`}
-                  className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
-                >
-                  {` (${tags[t].tagCount})`}
-                </Link>
               </div>
             );
           })}
