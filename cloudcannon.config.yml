@@ -96,4 +96,4 @@ collections_config:
     add_options:
       - name: Add Tags
         icon: sell
-        href: cloudcannon::editor/collections/tags/.md🆕
+        href: cloudcannon::editor/collections/tags:/data/data/tag/.md🆕
